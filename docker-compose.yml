@@ -52,6 +52,9 @@ services:
     image: rabbitmq:3.8.4-management-alpine
     container_name: rabbitmq
     env_file: [ "./.env" ]
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
     ports:
       - target: 5672
         published: 5672

@@ -189,6 +189,10 @@ Logically, a **Requirement File** is just a list of **pip** install arguments pl
 :---:  |  :---:
 **RABBITMQ_DEFAULT_USER**  |  Default RabbitMQ User Login
 **RABBITMQ_DEFAULT_PASS**  |  Default RabbitMQ User Password
+**LOG_PATH**  |  Just the Log Path
+**LOG_FILE**  |  Just the Log File
+**LOG_LEVEL**  |  Just the Log Level
+**LOGGER_NAME**  |  Just the Logger name
 
 ### 🐋 Development with Docker
 
