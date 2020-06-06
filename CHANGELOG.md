@@ -11,3 +11,6 @@ All important changes to this project will be added to this file! This changelog
 * Docker compose file to all microservices.
 * Dot env organization.
 * Makefile automations and shortcuts.
+* Adding Python Logger and Config to get system environment variables.
+* RabbitQM validate connection in Python Script and Docker Compose healthcheck.
+* Sender and Receiver scripts.

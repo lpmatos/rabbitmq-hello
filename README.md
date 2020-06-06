@@ -97,7 +97,9 @@ Press CTRL + C to stop it in Docker Compose or Dockerfile.
 
 ### Description
 
-Send messages to RabbitQM using Python.
+Send messages to RabbitQM using Python. To more information about RabbitMQ, access [this](/docs/rabbitmq.md).
+
+<img alt="rabbitmq" src="https://www.bogotobogo.com/python/images/RabbitMQ_Celery/HelloWorld/RabbitMQRouting.png" width="750px" float="center"/>
 
 ### Running pip
 

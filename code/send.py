@@ -61,6 +61,7 @@ def start_consuming() -> NoReturn:
 
   channel = connection.channel()
   channel.queue_declare(queue=queue)
+
   for _ in range(50):
     body = f"Hello World! ({_})"
     channel.basic_publish(exchange="", routing_key=queue, body=body)

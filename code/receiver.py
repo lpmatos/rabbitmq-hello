@@ -63,6 +63,9 @@ def run() -> NoReturn:
 
   channel = connection.channel()
   channel.queue_declare(queue=queue)
+
+  logger.info("Waiting for jobs.")
+
   channel.basic_consume(queue=queue,
     on_message_callback=callback,
     auto_ack=True)
