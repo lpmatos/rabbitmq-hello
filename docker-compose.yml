@@ -15,7 +15,7 @@ x-entrypoint: &default-entrypoint
     /bin/sh -c "
       set -e
       chmod a+x /usr/local/bin/wait && \
-        /usr/local/bin/wait && echo "Hello!"
+        /usr/local/bin/wait && echo Hello
       /bin/bash || exit 0
     "
 
@@ -30,24 +30,12 @@ x-volumes: &default-volumes
 services:
 
   python-rabbitmq:
-    container_name: ${CONTAINER_NAME_BOT}
+    container_name: ${CONTAINER_NAME}
     env_file: [ "./.env" ]
     build:
       context: ./${PATH_DOCKERFILE}
       dockerfile: Dockerfile
-    environment:
-      WAIT_HOSTS: rabbitmq:5672
-      WAIT_HOSTS_TIMEOUT: 300
-      WAIT_SLEEP_INTERVAL: 30
-      WAIT_HOST_CONNECT_TIMEOUT: 30
     <<: *default-entrypoint
-    entrypoint: >
-      /bin/sh -c "
-        set -e
-        /usr/local/bin/wait && \
-        echo Hello
-        /bin/bash || exit 0
-      "
     stdin_open: true
     tty: true
     healthcheck:
