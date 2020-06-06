@@ -10,3 +10,4 @@ All important changes to this project will be added to this file! This changelog
 * Including REAMDE.md and CHANGELOG.md files in their first versions.
 * Docker compose file to all microservices.
 * Dot env organization.
+* Makefile automations and shortcuts.
